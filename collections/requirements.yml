@@ -1,4 +1,3 @@
 ---
 collections:
 - arista.eos
-- ansible_collections.ansible.netcommon
