@@ -1,5 +1,8 @@
 ---
 - hosts: all
   gather_facts: false
+  vars:
+      ansible_user: user
+      ansible_password: password
   tasks:
     - ping:
