@@ -1,18 +1,5 @@
 ---
- - name: Connection test
-   gather_facts: yes
-   hosts: 192.168.122.30
-   become: yes
-
-   vars:
-       ansible_connection: network_cli
-       ansible_network_os: eos
-       ansible_user: admin
-       ansible_password: password
-       ansible_become: yes
-       ansible_become_method: enable
-       ansible_become_pass: password
-   
-   tasks:
-   - name: Test connection to device
-     ping:
+- hosts: all
+  gather_facts: false
+  tasks:
+    - ping:
