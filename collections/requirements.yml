@@ -1,0 +1,4 @@
+---
+collections:
+- arista.eos.eos_command
+- ansible_collections.ansible.netcommon.plugins.module_utils.network.common.network_template.NetworkTemplate
