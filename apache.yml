@@ -7,7 +7,6 @@
       ansible_password: password
       ansible_become_password: password
 
-
   tasks:
     - name: Update and install apache
       apt:
@@ -21,10 +20,14 @@
         state: directory
         mode: '0755'
 
-
     - name: Download website files
       git:
         repo: https://github.com/FrazerMichael/SDN-Lab2.git
         dest: /home/user/WebStorage
         clone: yes
+
+    - name: Move index file to /var/www/html
+      copy:
+        src: /home/user/WebStorage/index.html
+        dest: /var/www/html
         
