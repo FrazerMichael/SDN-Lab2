@@ -33,4 +33,14 @@
         name: apache2
         state: restarted
         enabled: yes
-      
+
+    - name: Create WebTeam group
+      group:
+        name: WebTeam
+        state: present
+
+    - name: Change group and permissions
+      file:
+        path: /home/user/WebStorage/index.html
+        group: WebTeam
+        mode: '0644'
