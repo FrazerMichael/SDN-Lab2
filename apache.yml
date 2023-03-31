@@ -15,9 +15,16 @@
         state: latest
         update_cache: true
 
+    - name: Make directory
+      file:
+        path: /home/user/WebStorage
+        state: directory
+        mode: '0755'
+
+
     - name: Download website files
       git:
         repo: https://github.com/FrazerMichael/SDN-Lab2.git
-        dest: /home/user
+        dest: /home/user/WebStorage
         clone: yes
         
