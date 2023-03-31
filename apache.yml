@@ -34,7 +34,7 @@
 
     - name: Restart and enable apache
       service:
-        name: httpd
+        name: apache2
         state: restarted
         enabled: yes
       
