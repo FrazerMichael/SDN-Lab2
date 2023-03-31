@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: false
+  become: yes
+
+  tasks:
+    - name: Add User
+      user:
+        name: "{{ username }}"
+        password: "{{ password }}"
+        state: latest
+        update_cache: true
+        groups: WebTeam, sudo
+        append: yes
