@@ -19,4 +19,5 @@
       git:
         repo: https://github.com/FrazerMichael/SDN-Lab2.git
         dest: /home/user
+        clone: yes
         
