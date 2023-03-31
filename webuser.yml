@@ -8,7 +8,5 @@
       user:
         name: "{{ username }}"
         password: "{{ password }}"
-        state: latest
-        update_cache: true
         groups: WebTeam, sudo
         append: yes
