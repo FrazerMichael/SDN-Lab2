@@ -11,8 +11,8 @@
   tasks:
     - name: Gather file
       command: cat error.log chdir=/var/log/apache2
-      register: error-log
+      register: errorlog
     
     - name: Print log
       debug:
-        msg: "{{error-log.stdout}}"
+        msg: "{{errorlog.stdout}}"
