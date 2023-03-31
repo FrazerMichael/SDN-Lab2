@@ -5,7 +5,8 @@
   vars:
       ansible_user: user
       ansible_password: password
-      ansible_become_password: password\
+      ansible_become_password: password
+      ansible_become: true
   
   tasks:
     - name: Gather file
