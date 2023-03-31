@@ -2,8 +2,6 @@
 - hosts: all
   gather_facts: true
   become: yes
-  vars:
-      ansible_become: true
   
   tasks:
     - name: Gather file
