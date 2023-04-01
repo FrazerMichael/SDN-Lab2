@@ -5,6 +5,7 @@
   vars:
       ansible_user: user
       ansible_password: password
+      become_password: password
 
   tasks:
     - name: Update and install apache
