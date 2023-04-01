@@ -1,0 +1,13 @@
+---
+- hosts: all
+  gather_facts: false
+  become: yes
+
+  tasks:
+    - name: Select user to see group membership
+      command: groups "{{ user }}"
+      register: groups
+    
+    - name: Print user's groups
+      debug:
+        msg: "{{groups.stdout}}"
