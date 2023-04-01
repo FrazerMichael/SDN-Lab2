@@ -10,4 +10,4 @@
     
     - name: Print user's groups
       debug:
-        msg: "{{groups}}"
+        msg: groups
