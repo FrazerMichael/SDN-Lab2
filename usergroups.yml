@@ -10,4 +10,4 @@
     
     - name: Print user's groups
       debug:
-        msg: "{{ usergroups }}"
+        msg: "{{ usergroups.stdout }}"
